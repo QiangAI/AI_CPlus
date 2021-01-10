@@ -1,0 +1,5 @@
+LIBRARY libmodel
+EXPORTS
+    calculate            @1
+    ?var_a@@3HA          @2 DATA
+    var_b                @3 DATA

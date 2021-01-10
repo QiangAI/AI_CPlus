@@ -1,0 +1,10 @@
+^C:\SDU\03CMAKELIST_QT_OPENCV_TORCH\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/SDU/03cmakelist_qt_opencv_torch -BC:/SDU/03cmakelist_qt_opencv_torch/build --check-stamp-file C:/SDU/03cmakelist_qt_opencv_torch/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

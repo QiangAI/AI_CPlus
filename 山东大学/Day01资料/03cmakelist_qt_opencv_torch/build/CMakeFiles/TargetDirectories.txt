@@ -1,0 +1,3 @@
+C:/SDU/03cmakelist_qt_opencv_torch/build/CMakeFiles/main.dir
+C:/SDU/03cmakelist_qt_opencv_torch/build/CMakeFiles/ALL_BUILD.dir
+C:/SDU/03cmakelist_qt_opencv_torch/build/CMakeFiles/ZERO_CHECK.dir

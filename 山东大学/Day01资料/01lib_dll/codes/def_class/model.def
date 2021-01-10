@@ -1,0 +1,5 @@
+LIBRARY libmodel
+EXPORTS
+    ??0Sobel@@QEAA@XZ              @1
+    ?getInfo@Sobel@@QEAAHPEBD@Z    @2
+    ?queryInfo@Sobel@@AEAAXH@Z     @3

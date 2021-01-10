@@ -1,0 +1,71 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-3.16/Modules/CMakeCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.16/Modules/CMakeCXXInformation.cmake
+C:/Program Files/CMake/share/cmake-3.16/Modules/CMakeCommonLanguageInclude.cmake
+C:/Program Files/CMake/share/cmake-3.16/Modules/CMakeGenericSystem.cmake
+C:/Program Files/CMake/share/cmake-3.16/Modules/CMakeInitializeConfigs.cmake
+C:/Program Files/CMake/share/cmake-3.16/Modules/CMakeLanguageInformation.cmake
+C:/Program Files/CMake/share/cmake-3.16/Modules/CMakeParseArguments.cmake
+C:/Program Files/CMake/share/cmake-3.16/Modules/CMakeRCInformation.cmake
+C:/Program Files/CMake/share/cmake-3.16/Modules/CMakeSystemSpecificInformation.cmake
+C:/Program Files/CMake/share/cmake-3.16/Modules/CMakeSystemSpecificInitialize.cmake
+C:/Program Files/CMake/share/cmake-3.16/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.16/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.16/Modules/CheckLibraryExists.cmake
+C:/Program Files/CMake/share/cmake-3.16/Modules/Compiler/CMakeCommonCompilerMacros.cmake
+C:/Program Files/CMake/share/cmake-3.16/Modules/Compiler/MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.16/Modules/Compiler/MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.16/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-3.16/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-3.16/Modules/FindThreads.cmake
+C:/Program Files/CMake/share/cmake-3.16/Modules/Platform/Windows-MSVC-C.cmake
+C:/Program Files/CMake/share/cmake-3.16/Modules/Platform/Windows-MSVC-CXX.cmake
+C:/Program Files/CMake/share/cmake-3.16/Modules/Platform/Windows-MSVC.cmake
+C:/Program Files/CMake/share/cmake-3.16/Modules/Platform/Windows.cmake
+C:/Program Files/CMake/share/cmake-3.16/Modules/Platform/WindowsPaths.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Core/Qt5CoreConfig.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Core/Qt5CoreConfigExtras.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Core/Qt5CoreConfigVersion.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Core/Qt5CoreMacros.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Gui/Qt5GuiConfig.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Gui/Qt5Gui_QICNSPlugin.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Gui/Qt5Gui_QSvgIconPlugin.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Gui/Qt5Gui_QSvgPlugin.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Gui/Qt5Gui_QTgaPlugin.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Gui/Qt5Gui_QTiffPlugin.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Gui/Qt5Gui_QVirtualKeyboardPlugin.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Gui/Qt5Gui_QWbmpPlugin.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Gui/Qt5Gui_QWebGLIntegrationPlugin.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Gui/Qt5Gui_QWebpPlugin.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Gui/Qt5Gui_QWindowsDirect2DIntegrationPlugin.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Gui/Qt5Gui_QWindowsIntegrationPlugin.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Gui/Qt5Gui_QXdgDesktopPortalThemePlugin.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake
+C:/Qt/Qt-5.14.0/lib/cmake/Qt5Widgets/Qt5Widgets_QWindowsVistaStylePlugin.cmake
+C:/SDU/03cmakelist_qt_opencv_torch/CMakeLists.txt
+C:/SDU/03cmakelist_qt_opencv_torch/build/CMakeFiles/3.16.2/CMakeCCompiler.cmake
+C:/SDU/03cmakelist_qt_opencv_torch/build/CMakeFiles/3.16.2/CMakeCXXCompiler.cmake
+C:/SDU/03cmakelist_qt_opencv_torch/build/CMakeFiles/3.16.2/CMakeRCCompiler.cmake
+C:/SDU/03cmakelist_qt_opencv_torch/build/CMakeFiles/3.16.2/CMakeSystem.cmake
+C:/libtorch/share/cmake/Caffe2/Caffe2Config.cmake
+C:/libtorch/share/cmake/Caffe2/Caffe2ConfigVersion.cmake
+C:/libtorch/share/cmake/Caffe2/Caffe2Targets-debug.cmake
+C:/libtorch/share/cmake/Caffe2/Caffe2Targets.cmake
+C:/libtorch/share/cmake/Caffe2/public/mkl.cmake
+C:/libtorch/share/cmake/Caffe2/public/mkldnn.cmake
+C:/libtorch/share/cmake/Caffe2/public/threads.cmake
+C:/libtorch/share/cmake/Caffe2/public/utils.cmake
+C:/libtorch/share/cmake/Torch/TorchConfig.cmake
+C:/libtorch/share/cmake/Torch/TorchConfigVersion.cmake

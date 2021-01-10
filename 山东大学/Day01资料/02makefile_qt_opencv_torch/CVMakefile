@@ -1,0 +1,25 @@
+INCLUDES   = /I "C:\opencv\install\include" 
+
+LIBS       = /LIBPATH:"C:\opencv420\install\x64\vc16\lib"  \
+		     /DYNAMICBASE \
+		       "opencv_core420d.lib" \
+			   "opencv_imgcodecs420d.lib" \
+			   "opencv_highgui420d.lib" \
+			   "opencv_imgproc420d.lib" 
+CL_ARGS    = /EHsc  \
+             /MDd \
+             /source-charset:utf-8  \
+		     /execution-charset:utf-8 \
+			 /nologo
+
+LINK_ARGS  = /DEBUG /MACHINE:X64 /NOLOGO
+
+OUTFILE    = main.exe
+SOURCE     = opencv.cpp
+OBJS       = opencv.obj
+
+$(OUTFILE):$(SOURCE)
+	@cl /c $(CL_ARGS) /Fo:$(OBJS) $(INCLUDES)  $(SOURCE) 
+	@link $(LINK_ARGS) $(LIBS) /OUT:$(OUTFILE) $(OBJS)
+clean:
+	@del *.obj *.exe *.pdb *.ilk 2>/Nul

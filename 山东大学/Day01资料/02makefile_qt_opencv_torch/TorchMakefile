@@ -1,0 +1,30 @@
+INCLUDES   = /I "C:\libtorch\include\torch\csrc\api\include"  \
+             /I "C:\libtorch\include"
+
+LIBS       = /LIBPATH:"C:\libtorch\lib"  \
+		     /DYNAMICBASE \
+		       "torch.lib" \
+               "c10.lib"  \
+               "torch_cpu.lib"
+
+
+CL_ARGS    = /EHsc  \
+             /MDd \
+             /source-charset:utf-8  \
+		     /execution-charset:utf-8 \
+			 /nologo
+
+LINK_ARGS  = /DEBUG /MACHINE:X64 /NOLOGO
+
+OUTFILE    = main.exe
+SOURCE     = torch.cpp
+OBJS       = torch.obj
+
+$(OUTFILE):$(SOURCE)
+	@cl /c $(CL_ARGS) /Fo:$(OBJS) $(INCLUDES)  $(SOURCE) 
+	@link $(LINK_ARGS) $(LIBS) /OUT:$(OUTFILE) $(OBJS)
+clean:
+	@del *.obj *.exe *.pdb *.ilk 2>/Nul
+
+
+# 记得把Qt与OpenCV的dll所在目录设置为PATH环境变量，否则运行的时候会产生错误。

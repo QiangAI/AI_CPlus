@@ -40,3 +40,11 @@
 >    - Torch C++下载后可以直接使用；
 
 -----
+
+# SDK开发配置 - 2021年1月10日
+>- 上传三个内容的文档与例子代码。存放在`Day01资料`目录：
+>    - `01lib_dll`:动态库与静态的编译；
+>    - `02makefile_qt_opencv_torch`: Makefile工程组织方式的SDK配置
+>    - `03cmakelist_qt_opencv_torch` : CMakelists.txt工程组织方式的SDK配置
+
+------
