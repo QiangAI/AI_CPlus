@@ -16,16 +16,18 @@
 # 环境软件下载资源 - 2021年1月10日
 
 >- 上传实训需要的环境的安装软件。
->    1. git：代码管理工具 
+>    - git：代码管理工具 
 >
->    2. Visual Studio 2019:编译器与链接器
+>    - Visual Studio 2019:编译器与链接器
 >
->    3. Visual Studio Code：开发代码编辑器工具
+>    - Visual Studio Code：开发代码编辑器工具
 >
->    4. CMake：C++工程组织与管理工具
+>    - CMake：C++工程组织与管理工具
 >
->    5. Qt 5.14.2 ： GUI开发SDK
+>    - Qt 5.14.2 ： GUI开发SDK
 >
->    6. OpenCV：机器视觉开发SDK
+>    - OpenCV：机器视觉开发SDK
 >
->    7. Torch C++：深度学习开发SDK
+>    - Torch C++：深度学习开发SDK
+
+
