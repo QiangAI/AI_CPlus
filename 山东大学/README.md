@@ -48,3 +48,18 @@
 >    - `03cmakelist_qt_opencv_torch` : CMakelists.txt工程组织方式的SDK配置
 
 ------
+
+# 任务一 - 2021年1月11日
+>1. 掌握头文件，lib库，dll库三者在C++开发中的作用；
+>
+>2. 掌握工程组织的三种方式
+>    - Makefile
+>    - CMakelists.txt
+>    - QMake
+>
+>3. Qt,OpenCV, Torch C++的下载、安装与开发配置
+>4. Git的使用
+>    - 下载代码
+>    - 上传作业-分支
+
+------
