@@ -1,0 +1,10 @@
+^C:\01WORKS\17TORCHC\C03_TORCH2CV\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/01works/17torchC/c03_torch2cv -BC:/01works/17torchC/c03_torch2cv/build --check-stamp-file C:/01works/17torchC/c03_torch2cv/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

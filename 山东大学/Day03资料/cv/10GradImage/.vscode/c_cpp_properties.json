@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "Mac",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/Users/yangqiang/Qt512/5.12.1/Src/qtbase/include/GtCore/**",
+                "/Users/yangqiang/Qt512/5.12.1/Src/qtbase/include/GtGui/**",
+                "/Users/yangqiang/Qt512/5.12.1/Src/qtbase/include/QtWidgets/**",
+                "/Users/yangqiang/Qt512/5.12.1/Src/qtbase/include/**",
+                ".",
+                "/usr/local/include/opencv4/**"
+            ],
+            "defines": [],
+            "macFrameworkPath": [
+                "/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/System/Library/Frameworks"
+            ],
+            "compilerPath": "/usr/bin/clang",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}

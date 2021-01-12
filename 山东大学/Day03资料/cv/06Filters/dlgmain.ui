@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dlg_opencv</class>
+ <widget class="QDialog" name="dlg_opencv">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>391</width>
+    <height>488</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>OpenCV之图像滤波</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QPushButton{
+	border:1px solid #AAAAAA;
+	border-radius:6px;
+	padding:2px 4px;
+}
+
+QLabel{
+	border:1px solid #0000FF;
+	border-radius:6px;
+	padding:4px 4px;
+}</string>
+  </property>
+  <widget class="QFrame" name="frm_image">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>371</width>
+     <height>211</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="lbl_output">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>351</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>图像输出区域</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="btn_blur">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>240</y>
+     <width>80</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>Blur</string>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_2d">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>240</y>
+     <width>80</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Filter2D</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_gauss">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>240</y>
+     <width>80</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Gauss</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_box">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>291</y>
+     <width>80</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Box</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_median">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>240</y>
+     <width>80</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Median</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_laplace">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>290</y>
+     <width>80</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Laplace</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_sobel">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>290</y>
+     <width>80</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Sobel</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_bilater">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>290</y>
+     <width>80</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Bilateral</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_dilate">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>340</y>
+     <width>80</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>dilate</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_erode">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>340</y>
+     <width>80</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>erode</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_down">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>340</y>
+     <width>80</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>pyrDown </string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_up">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>340</y>
+     <width>80</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>pyrUP</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_mean">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>390</y>
+     <width>80</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>pyrMean</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_scharr">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>390</y>
+     <width>80</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Scharr</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_sepfilter">
+   <property name="geometry">
+    <rect>
+     <x>200</x>
+     <y>390</y>
+     <width>80</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>sepFilter</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_sqrbox">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>390</y>
+     <width>80</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>sqrBox</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_pyramid">
+   <property name="geometry">
+    <rect>
+     <x>70</x>
+     <y>440</y>
+     <width>80</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>高斯金字塔</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_morph">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>440</y>
+     <width>80</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>形态变换</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>btn_blur</sender>
+   <signal>clicked()</signal>
+   <receiver>dlg_opencv</receiver>
+   <slot>blur()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>59</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>195</x>
+     <y>191</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_bilater</sender>
+   <signal>clicked()</signal>
+   <receiver>dlg_opencv</receiver>
+   <slot>bilater()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>59</x>
+     <y>304</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>195</x>
+     <y>191</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_gauss</sender>
+   <signal>clicked()</signal>
+   <receiver>dlg_opencv</receiver>
+   <slot>gauss()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>149</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>195</x>
+     <y>191</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_box</sender>
+   <signal>clicked()</signal>
+   <receiver>dlg_opencv</receiver>
+   <slot>box()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>149</x>
+     <y>305</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>195</x>
+     <y>191</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_2d</sender>
+   <signal>clicked()</signal>
+   <receiver>dlg_opencv</receiver>
+   <slot>fliter2d()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>329</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>195</x>
+     <y>191</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_sobel</sender>
+   <signal>clicked()</signal>
+   <receiver>dlg_opencv</receiver>
+   <slot>sobel()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>329</x>
+     <y>304</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>195</x>
+     <y>191</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_median</sender>
+   <signal>clicked()</signal>
+   <receiver>dlg_opencv</receiver>
+   <slot>median()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>195</x>
+     <y>191</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_laplace</sender>
+   <signal>clicked()</signal>
+   <receiver>dlg_opencv</receiver>
+   <slot>laplace()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>304</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>195</x>
+     <y>191</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_dilate</sender>
+   <signal>clicked()</signal>
+   <receiver>dlg_opencv</receiver>
+   <slot>dilate()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>59</x>
+     <y>354</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>195</x>
+     <y>216</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_erode</sender>
+   <signal>clicked()</signal>
+   <receiver>dlg_opencv</receiver>
+   <slot>erode()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>149</x>
+     <y>354</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>195</x>
+     <y>216</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_down</sender>
+   <signal>clicked()</signal>
+   <receiver>dlg_opencv</receiver>
+   <slot>down()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>354</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>195</x>
+     <y>216</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_up</sender>
+   <signal>clicked()</signal>
+   <receiver>dlg_opencv</receiver>
+   <slot>up()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>329</x>
+     <y>354</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>195</x>
+     <y>216</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_mean</sender>
+   <signal>clicked()</signal>
+   <receiver>dlg_opencv</receiver>
+   <slot>mean()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>59</x>
+     <y>404</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>195</x>
+     <y>216</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_scharr</sender>
+   <signal>clicked()</signal>
+   <receiver>dlg_opencv</receiver>
+   <slot>scharr()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>149</x>
+     <y>404</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>195</x>
+     <y>216</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_sepfilter</sender>
+   <signal>clicked()</signal>
+   <receiver>dlg_opencv</receiver>
+   <slot>sepfilter()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>239</x>
+     <y>404</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>195</x>
+     <y>216</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_sqrbox</sender>
+   <signal>clicked()</signal>
+   <receiver>dlg_opencv</receiver>
+   <slot>sqrbox()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>329</x>
+     <y>404</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>195</x>
+     <y>216</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_pyramid</sender>
+   <signal>clicked()</signal>
+   <receiver>dlg_opencv</receiver>
+   <slot>pyramid()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>109</x>
+     <y>454</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>195</x>
+     <y>243</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_morph</sender>
+   <signal>clicked()</signal>
+   <receiver>dlg_opencv</receiver>
+   <slot>morph()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>289</x>
+     <y>454</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>195</x>
+     <y>243</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>blur()</slot>
+  <slot>fliter2d()</slot>
+  <slot>gauss()</slot>
+  <slot>median()</slot>
+  <slot>bilater()</slot>
+  <slot>box()</slot>
+  <slot>laplace()</slot>
+  <slot>sobel()</slot>
+  <slot>up()</slot>
+  <slot>down()</slot>
+  <slot>dilate()</slot>
+  <slot>erode()</slot>
+  <slot>mean()</slot>
+  <slot>scharr()</slot>
+  <slot>sepfilter()</slot>
+  <slot>sqrbox()</slot>
+  <slot>pyramid()</slot>
+  <slot>morph()</slot>
+ </slots>
+</ui>

@@ -1,0 +1,10 @@
+^C:\01WORKS\17TORCHC\C02_LOADDATA\BUILD\CMAKEFILES\343B565385CF410F4C504A7F2D442955\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/01works/17torchC/c02_loaddata -BC:/01works/17torchC/c02_loaddata/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/01works/17torchC/c02_loaddata/build/main.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

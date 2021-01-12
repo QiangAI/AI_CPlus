@@ -1,0 +1,10 @@
+^C:\01WORKS\17TORCHC\C04_DATALOADER\BUILD\CMAKEFILES\9A9C321496328E547B92C990299F9EF9\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/01works/17torchC/c04_dataloader -BC:/01works/17torchC/c04_dataloader/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/01works/17torchC/c04_dataloader/build/main.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
