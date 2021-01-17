@@ -1,0 +1,47 @@
+cmake_minimum_required(VERSION 3.16)
+project(main)
+
+set(CMAKE_CXX_STANDARD 17) 
+set(CMAKE_CXX_STANDARD_REQIUIRED True) 
+set(CMAKE_INCLUDE_CURRENT_DIR ON) 
+
+set(CMAKE_PREFIX_PATH  "C:/libtorch;C:/Qt514/lib")
+
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON) 
+
+find_package(Qt5Widgets REQUIRED)
+find_package(Qt5Gui REQUIRED)
+find_package(Qt5Core REQUIRED)
+find_package(Torch REQUIRED)
+
+include_directories(
+    C:/Qt514/include
+    C:/opencv_sdu/install/include
+)
+
+link_directories(
+    C:/Qt514/lib
+    C:/opencv_sdu/install/x64/vc16/lib
+)
+
+aux_source_directory(.      SOURCES1)
+aux_source_directory(devs   SOURCES2)
+aux_source_directory(guis   SOURCES3)
+aux_source_directory(models SOURCES4)
+
+add_executable(main ${SOURCES1} ${SOURCES2} ${SOURCES3}  ${SOURCES4})
+
+target_link_libraries(
+    main
+    "${TORCH_LIBRARIES}" 
+    opencv_core420d.lib
+    opencv_imgcodecs420d.lib 
+    opencv_imgproc420d.lib
+    opencv_videoio420d.lib 
+    Qt5Cored.lib  
+    Qt5Widgetsd.lib 
+    Qt5Guid.lib
+)
+
+set_property(TARGET main PROPERTY CXX_STANDARD 17)
